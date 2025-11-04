@@ -27,10 +27,10 @@ public class Equipamento {
     private String modelo;
 
     @Column(name = "NUMERO_SERIE", length = 80)
-    private String numero_serie;
+    private String numeroSerie;
 
     @Column(name = "DATA_CADASTRO")
-    private LocalDate data_cadastro;
+    private LocalDate dataCadastro;
 
     public Long getId() {
         return id;
@@ -72,19 +72,19 @@ public class Equipamento {
         this.modelo = modelo;
     }
 
-    public String getNumero_serie() {
-        return numero_serie;
+    public String getNumeroSerie() {
+        return numeroSerie;
     }
 
-    public void setNumero_serie(String numero_serie) {
-        this.numero_serie = numero_serie;
+    public void setNumeroSerie(String numero_serie) {
+        this.numeroSerie = numero_serie;
     }
 
-    public LocalDate getData_cadastro() {
-        return data_cadastro;
+    public LocalDate getDataCadastro() {
+        return dataCadastro;
     }
 
-    public void setData_cadastro(LocalDate data_cadastro) {
-        this.data_cadastro = data_cadastro;
+    public void setDataCadastro(LocalDate data_cadastro) {
+        this.dataCadastro = data_cadastro;
     }
 }

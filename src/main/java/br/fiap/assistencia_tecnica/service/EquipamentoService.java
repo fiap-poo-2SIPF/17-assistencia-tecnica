@@ -5,7 +5,6 @@ import br.fiap.assistencia_tecnica.repository.ClienteRepository;
 import br.fiap.assistencia_tecnica.repository.EquipamentoRepository;
 import br.fiap.assistencia_tecnica.web.dto.EquipamentoDTO;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.NoSuchElementException;
@@ -29,8 +28,8 @@ public class EquipamentoService {
         equipamento.setModelo(equipamentoDTO.getModelo());
         equipamento.setMarca(equipamentoDTO.getMarca());
         equipamento.setTipo(equipamentoDTO.getTipo());
-        equipamento.setNumero_serie(equipamentoDTO.getNumero_serie());
-        equipamento.setData_cadastro(equipamentoDTO.getData_cadastro());
+        equipamento.setNumeroSerie(equipamentoDTO.getNumeroSerie());
+        equipamento.setDataCadastro(equipamentoDTO.getDataCadastro());
         equipamento.setCliente(cliente);
 
         return equipamentoRepository.save(equipamento);
