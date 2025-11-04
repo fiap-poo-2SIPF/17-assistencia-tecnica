@@ -22,13 +22,7 @@ public class ClienteController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Cliente criar(@RequestBody ClienteRequest requisicao) {
-        Cliente cliente = new Cliente();
-
-        cliente.setNome(requisicao.getNome());
-        cliente.setEmail(requisicao.getEmail());
-        cliente.setTelefone(requisicao.getTelefone());
-        cliente.setSenha(requisicao.getSenha());
-        return service.salvar(cliente);
+        return service.salvar(requisicao);
     }
 
     @GetMapping
